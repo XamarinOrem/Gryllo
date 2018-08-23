@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GrylooProject.Views.HomePage"
+             xmlns:microcharts="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms">
+    <ContentPage.Content>
+
+        <StackLayout Padding="10" BackgroundColor="White">
+            
+        <StackLayout Padding="10" BackgroundColor="White">
+
+            <Frame IsClippedToBounds="true" x:Name="frameButton" Margin="0,10,0,0"  BackgroundColor="#fcbf49" HeightRequest="60" Padding="0" HasShadow="True" CornerRadius="30"  >
+                <StackLayout IsClippedToBounds="true" x:Name="frameInsideStacklayout" Padding="-20" Orientation="Horizontal" HeightRequest="60" HorizontalOptions="FillAndExpand" VerticalOptions="Fill" Spacing="0">
+
+                    <Button x:Name="CandituresButton"  Margin="15,0,0,0" HeightRequest="60"  HorizontalOptions="StartAndExpand" 
+                        BorderColor="Transparent"
+                  BorderRadius="0"
+                     TextColor="Black"
+                        FontSize="12"
+                    Text="CANDIDUTURES"
+                        FontAttributes="Bold"
+                        Clicked="canditureClicked"
+                            
+   
+                        
+                    BackgroundColor="#fcbf49"
+                    
+                            
+                         />
+
+
+
+                    <Button  x:Name="leadersButton" Margin="0,0,15,0" HeightRequest="60"  HorizontalOptions="EndAndExpand" 
+                        BorderColor="Transparent"
+                  BorderRadius="0"
+                     TextColor="Black"
+                        FontSize="12"
+                    Text="LEADERS"
+                        
+                        FontAttributes="Bold"
+                Clicked="leadersClicked"
+                    BackgroundColor="#fcbf49"
+                    
+                            
+                          />
+
+
+
+
+                </StackLayout>
+            </Frame>
+
+            </StackLayout>
+           
+                
+                <!--view for canditutre-->
+
+            <ContentView x:Name="CanditatureView"  IsVisible="false"  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <ScrollView IsClippedToBounds="True">
+
+                    <StackLayout BackgroundColor="White">
+                        <Label Margin="0,25,0,0"  Text="Xyz Graph"  HorizontalOptions="CenterAndExpand" VerticalOptions="Start"
+                              TextColor="Black" FontSize="16" FontAttributes="Bold"/>
+
+                        <StackLayout  Padding="0" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" >
+                    
+                    
+                    
+                    <microcharts:ChartView HorizontalOptions="FillAndExpand"  x:Name="chartOne"  Margin="0" />
+
+
+
+                </StackLayout>
+
+
+                    </StackLayout>
+
+                </ScrollView>
+
+            </ContentView>
+
+
+
+            <!--view for leader-->
+            
+            <ContentView x:Name="leaderView"  IsVisible="false"  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+                <ScrollView IsClippedToBounds="True">
+
+                    <StackLayout BackgroundColor="White">
+                        <Label Margin="0,25,0,0"  Text="Xyz Graph"  HorizontalOptions="CenterAndExpand" VerticalOptions="Start"
+                              TextColor="Black" FontSize="16" FontAttributes="Bold"/>
+
+                        <StackLayout Orientation="Vertical" Padding="0"  View.VerticalOptions="CenterAndExpand">
+
+                    <microcharts:ChartView HorizontalOptions="FillAndExpand" x:Name="charttwo"  Margin="0" />
+
+
+
+                </StackLayout>
+
+                    </StackLayout>
+
+                </ScrollView>
+
+            </ContentView>
+
+               
+         
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

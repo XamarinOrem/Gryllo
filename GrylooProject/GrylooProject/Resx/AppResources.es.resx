@@ -1,0 +1,517 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="back" xml:space="preserve">
+    <value>Atrás</value>
+  </data>
+  <data name="candidature" xml:space="preserve">
+    <value>PARTIDOS</value>
+  </data>
+  <data name="category" xml:space="preserve">
+    <value>Lista Gráficos</value>
+  </data>
+  <data name="change" xml:space="preserve">
+    <value>Cambiar</value>
+  </data>
+  <data name="changePostalCode" xml:space="preserve">
+    <value>Cambiar Código Postal</value>
+  </data>
+  <data name="checkInternet" xml:space="preserve">
+    <value>Comprueba la conexión a Internet</value>
+  </data>
+  <data name="configure" xml:space="preserve">
+    <value>Configuración</value>
+  </data>
+  <data name="contactUs" xml:space="preserve">
+    <value>Contáctanos</value>
+  </data>
+  <data name="CreateNwAccnAlreadyhveAccnt" xml:space="preserve">
+    <value>¿Ya registrado? ENTRAR</value>
+  </data>
+  <data name="CreateNwAccnDOB" xml:space="preserve">
+    <value>Año de nacimiento</value>
+  </data>
+  <data name="CreateNwAccnFemale" xml:space="preserve">
+    <value>Mujer</value>
+  </data>
+  <data name="CreateNwAccnGender" xml:space="preserve">
+    <value>Sexo</value>
+  </data>
+  <data name="CreateNwAccnMale" xml:space="preserve">
+    <value>Hombre</value>
+  </data>
+  <data name="CreateNwAccnNextButton" xml:space="preserve">
+    <value>Siguiente</value>
+  </data>
+  <data name="CreateNwAccnPhone" xml:space="preserve">
+    <value>Número de movil</value>
+  </data>
+  <data name="CreateNwAccnPostalCode" xml:space="preserve">
+    <value>Código Postal</value>
+  </data>
+  <data name="CreateNwAccnTitle" xml:space="preserve">
+    <value>REGISTRARSE</value>
+  </data>
+  <data name="CreateVerificationTitle" xml:space="preserve">
+    <value>Introduce el código enviado por SMS</value>
+  </data>
+  <data name="EdProfileChangeButton" xml:space="preserve">
+    <value>Cambiar</value>
+  </data>
+  <data name="enterMobile" xml:space="preserve">
+    <value>Introduce tu número de móvil!</value>
+  </data>
+  <data name="enterMobileNumber" xml:space="preserve">
+    <value>Introduce tu número de móvil!</value>
+  </data>
+  <data name="entervalidpostalcode" xml:space="preserve">
+    <value>Introduce el Código postal!</value>
+  </data>
+  <data name="help" xml:space="preserve">
+    <value>Ayuda</value>
+  </data>
+  <data name="home" xml:space="preserve">
+    <value>Inicio</value>
+  </data>
+  <data name="leaders" xml:space="preserve">
+    <value>LÍDERES</value>
+  </data>
+  <data name="legal" xml:space="preserve">
+    <value>Nota Legal</value>
+  </data>
+  <data name="LegalNotes" xml:space="preserve">
+    <value>Nota Legal</value>
+  </data>
+  <data name="LoginButton" xml:space="preserve">
+    <value>ENTRAR</value>
+  </data>
+  <data name="LoginCreateAccn" xml:space="preserve">
+    <value>Registrarse</value>
+  </data>
+  <data name="LoginDOB" xml:space="preserve">
+    <value>Año de nacimiento</value>
+  </data>
+  <data name="loginfirst" xml:space="preserve">
+    <value>Para ver resultados y poder votar es necesario que se registre. Es gratuito y anónimo</value>
+  </data>
+  <data name="LoginGuest" xml:space="preserve">
+    <value>USUARIO INVITADO</value>
+  </data>
+  <data name="LogInMobile" xml:space="preserve">
+    <value>Número de teléfono</value>
+  </data>
+  <data name="makePremimum" xml:space="preserve">
+    <value>Hacerse usuario Premium</value>
+  </data>
+  <data name="Myprofile" xml:space="preserve">
+    <value>Mi perfíl</value>
+  </data>
+  <data name="no" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="ok" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="payNow" xml:space="preserve">
+    <value>Pague ahora</value>
+  </data>
+  <data name="pleaseselectgender" xml:space="preserve">
+    <value>¡Selecione el sexo!</value>
+  </data>
+  <data name="postalCode" xml:space="preserve">
+    <value>Código Postal</value>
+  </data>
+  <data name="postalcodefivedigit" xml:space="preserve">
+    <value>El Código Postal debe tener 5 números</value>
+  </data>
+  <data name="profile" xml:space="preserve">
+    <value>Perfíl</value>
+  </data>
+  <data name="province" xml:space="preserve">
+    <value>Provincia</value>
+  </data>
+  <data name="rate" xml:space="preserve">
+    <value>Valorar</value>
+  </data>
+  <data name="RateApp" xml:space="preserve">
+    <value>Valora la App</value>
+  </data>
+  <data name="rateLeader" xml:space="preserve">
+    <value>Valora líderes</value>
+  </data>
+  <data name="RateLeaderButton" xml:space="preserve">
+    <value>Valorar</value>
+  </data>
+  <data name="registrationPreview" xml:space="preserve">
+    <value>Regístrese antes</value>
+  </data>
+  <data name="resend" xml:space="preserve">
+    <value>Reenviar</value>
+  </data>
+  <data name="result" xml:space="preserve">
+    <value>Resultados</value>
+  </data>
+  <data name="selectBirthYear" xml:space="preserve">
+    <value>Seleccione año de nacimiento</value>
+  </data>
+  <data name="send" xml:space="preserve">
+    <value>Enviar</value>
+  </data>
+  <data name="ShareApp" xml:space="preserve">
+    <value>Compartir App</value>
+  </data>
+  <data name="thereIsNoData" xml:space="preserve">
+    <value>No hay datos para mostrar</value>
+  </data>
+  <data name="validPostalCode" xml:space="preserve">
+    <value>Introduce Código Postal válido</value>
+  </data>
+  <data name="VerificationButton" xml:space="preserve">
+    <value>CONFIRMAR</value>
+  </data>
+  <data name="VoteCandidature" xml:space="preserve">
+    <value>Votar a un partido</value>
+  </data>
+  <data name="wouldYouLikeRate" xml:space="preserve">
+    <value>¿Quiere valorar a los líderes?</value>
+  </data>
+  <data name="wouldYouLikeVote" xml:space="preserve">
+    <value>¿Quiere votar?</value>
+  </data>
+  <data name="writeComment" xml:space="preserve">
+    <value>Escriba un comentario…</value>
+  </data>
+  <data name="yearOfBirth" xml:space="preserve">
+    <value>Año de nacimiento</value>
+  </data>
+  <data name="yes" xml:space="preserve">
+    <value>Si</value>
+  </data>
+  <data name="youhavenotvote" xml:space="preserve">
+    <value>¡No has votado desde hace 30 días!</value>
+  </data>
+  <data name="youRatedSucessfull" xml:space="preserve">
+    <value>¡Valoración realizada!</value>
+  </data>
+  <data name="yourMobileNumberMustbe" xml:space="preserve">
+    <value>El número de móvil debe tener 9 números</value>
+  </data>
+  <data name="yourPostalCodeMust" xml:space="preserve">
+    <value>El Código Postal debe tener 5 números</value>
+  </data>
+  <data name="yourSession" xml:space="preserve">
+    <value>¡Su sesión ha caducado!</value>
+  </data>
+  <data name="youVoted" xml:space="preserve">
+    <value>¡Voto realizado!</value>
+  </data>
+  <data name="alreadypremimum" xml:space="preserve">
+    <value>Usuario premium</value>
+  </data>
+  <data name="cancel" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="charts" xml:space="preserve">
+    <value>Gráficos</value>
+  </data>
+  <data name="notGetOtp" xml:space="preserve">
+    <value>¿No obtuviste la OTP?</value>
+  </data>
+  <data name="stripeGetway" xml:space="preserve">
+    <value>Puerta de enlace de pago segura por Stripe Company.</value>
+  </data>
+  <data name="submit" xml:space="preserve">
+    <value>Enviar</value>
+  </data>
+  <data name="pricePackage" xml:space="preserve">
+    <value>Precio</value>
+  </data>
+  <data name="selectType" xml:space="preserve">
+    <value>Where is first message?</value>
+  </data>
+  <data name="lastsevendays" xml:space="preserve">
+    <value>Últimos 7 días</value>
+  </data>
+  <data name="lastfiftendays" xml:space="preserve">
+    <value>Últimos 15 días</value>
+  </data>
+  <data name="lastthirtyndays" xml:space="preserve">
+    <value>Últimos 30 días</value>
+  </data>
+  <data name="lastsixtydays" xml:space="preserve">
+    <value>Últimos 60 días</value>
+  </data>
+  <data name="lastoneyeardays" xml:space="preserve">
+    <value>Último año</value>
+  </data>
+  <data name="all" xml:space="preserve">
+    <value>Todas</value>
+  </data>
+  <data name="totalCountry" xml:space="preserve">
+    <value>Total España</value>
+  </data>
+  <data name="totalregion" xml:space="preserve">
+    <value>Total Comunidad</value>
+  </data>
+  <data name="selectTime" xml:space="preserve">
+    <value>Periodo</value>
+  </data>
+  <data name="lastsixmonth" xml:space="preserve">
+    <value>Últimos 3 meses</value>
+  </data>
+  <data name="lasttwomonth" xml:space="preserve">
+    <value>Últimos 2 meses</value>
+  </data>
+  <data name="select" xml:space="preserve">
+    <value>Seleccionar</value>
+  </data>
+  <data name="region" xml:space="preserve">
+    <value>Comunidad</value>
+  </data>
+  <data name="cardNumber" xml:space="preserve">
+    <value>Número de tarjeta</value>
+  </data>
+  <data name="CVV" xml:space="preserve">
+    <value>CVV</value>
+  </data>
+  <data name="entercard" xml:space="preserve">
+    <value>Introducir número de tarjeta</value>
+  </data>
+  <data name="entercomment" xml:space="preserve">
+    <value>¡Escribe tu comentario!</value>
+  </data>
+  <data name="entercvv" xml:space="preserve">
+    <value>Introducir CVV</value>
+  </data>
+  <data name="entermonth" xml:space="preserve">
+    <value>Introducir Mes</value>
+  </data>
+  <data name="entervalidcard" xml:space="preserve">
+    <value>Intoducir número tarjeta válido</value>
+  </data>
+  <data name="entervalidcvv" xml:space="preserve">
+    <value>Introducir CVV válido</value>
+  </data>
+  <data name="entervalidmonth" xml:space="preserve">
+    <value>Introducir mes válido</value>
+  </data>
+  <data name="entervalidyear" xml:space="preserve">
+    <value>Introducir año válido</value>
+  </data>
+  <data name="enteryear" xml:space="preserve">
+    <value>Introducir Año</value>
+  </data>
+  <data name="fora" xml:space="preserve">
+    <value>para una Licencia Premium para</value>
+  </data>
+  <data name="monthLicence" xml:space="preserve">
+    <value>meses</value>
+  </data>
+  <data name="newPostalcode" xml:space="preserve">
+    <value>Nuevo Código Postal</value>
+  </data>
+  <data name="PaymentSuccessful" xml:space="preserve">
+    <value>Pago realizado</value>
+  </data>
+  <data name="Pleasebecomepremimumuser" xml:space="preserve">
+    <value>Gráfico no disponible para su tipo de usuario. Hágase usuario Premium</value>
+  </data>
+  <data name="pMonth" xml:space="preserve">
+    <value>Mes(MM)</value>
+  </data>
+  <data name="Postalcodeupdated" xml:space="preserve">
+    <value>Código Postal actualizado</value>
+  </data>
+  <data name="pYear" xml:space="preserve">
+    <value>Año(YYYY)</value>
+  </data>
+  <data name="Sucess" xml:space="preserve">
+    <value>Sucess</value>
+  </data>
+  <data name="Thischartisnotvisible" xml:space="preserve">
+    <value>Este gráfico no estádisponible</value>
+  </data>
+  <data name="chartEight" xml:space="preserve">
+    <value>Valoración de líderes en los últimos 90 días.
+Por tramos de edad y sexo.</value>
+  </data>
+  <data name="chartFive" xml:space="preserve">
+    <value>Porcentaje de votos de cada partido respecto a los otros partidos en los últimos 90 días.
+Por tramos de edad y sexo.</value>
+  </data>
+  <data name="chartFour" xml:space="preserve">
+    <value>Evolución del porcentaje de votos en el tiempo</value>
+  </data>
+  <data name="chartNine" xml:space="preserve">
+    <value>Líderes ganadores por Comunidad y Provincia (según tipo de usuario).
+Número de votos en los últimos 90 días.</value>
+  </data>
+  <data name="chartOne" xml:space="preserve">
+    <value>Número de votos en los últimos 90 días.
+Detalle por Comunidades y Provincias (según tipo de usuario)</value>
+  </data>
+  <data name="chartSeven" xml:space="preserve">
+    <value>Evolución de la valoración de líderes</value>
+  </data>
+  <data name="chartSix" xml:space="preserve">
+    <value>Partidos ganadores por Comunidad y Provincia (según tipo de usuario).
+Número de votos en los últimos 90 días.</value>
+  </data>
+  <data name="chartThree" xml:space="preserve">
+    <value>Valoración media de líderes en los últimos 90 días.
+Detalle por Comunidades y Provincias (según tipo de usuario)</value>
+  </data>
+  <data name="chartTwo" xml:space="preserve">
+    <value>Porcentaje de votos en los últimos 90 días.
+Detalle por Comunidades y Provincias (según tipo de usuario)</value>
+  </data>
+
+
+  <data name="chartten" xml:space="preserve">
+    <value>Muestra a que partidos votaban hace 3 meses los usuarios que hoy votan a un determinado partido</value>
+  </data>
+
+    <data name="chartelaven" xml:space="preserve">
+    <value>Muestra a que partidos votan hoy los usuarios que hace 3 meses votaban a un determinado partido</value>
+  </data>
+
+     <data name="chartetwalav" xml:space="preserve">
+    <value>Evolución del número de votos en Grylloo</value>
+  </data>
+    <data name="chartethirteen" xml:space="preserve">
+    <value>Evolución del número de usuarios en Grylloo</value>
+  </data>
+
+
+     <data name="alreadyVote" xml:space="preserve">
+    <value>¡Ya has votado hoy!</value>
+  </data>
+     <data name="alreadyRate" xml:space="preserve">
+    <value>¡Ya le has valorado hoy!</value>
+  </data>
+
+
+    <data name="ConfirmRegistration" xml:space="preserve">
+    <value>Confirmar registro</value>
+  </data>
+    <data name="Updatedetails" xml:space="preserve">
+    <value>Actualizar datos</value>
+  </data>
+    
+</root>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GrylooProject.Views.Help">
+    <ContentPage.Content>
+      <ScrollView>
+        <StackLayout Padding="15,20,15,15"  >
+            <Label x:Name="helpText" 
+                VerticalOptions="FillAndExpand" 
+                HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Start"
+
+            VerticalTextAlignment="Start"/>
+        </StackLayout>
+      </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

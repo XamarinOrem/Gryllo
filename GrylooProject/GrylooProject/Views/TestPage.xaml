@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                xmlns:strings="clr-namespace:GrylooProject;assembly=GrylooProject"
+              xmlns:custom="clr-namespace:GrylooProject.CustomControls;assembly=GrylooProject"
+             x:Class="GrylooProject.Views.TestPage">
+    <ContentPage.Content>
+        <ScrollView>
+        <StackLayout Padding="10" BackgroundColor="White">
+
+
+                <StackLayout Padding="10"  Orientation="Vertical" BackgroundColor="#EFEDEE"    HorizontalOptions="FillAndExpand" >
+                    <Label Text="ELECCIONES GENERALES" TextColor="Black" FontSize="16" HorizontalOptions="Center"  VerticalOptions="Center" />
+                </StackLayout>
+
+
+
+                <StackLayout Padding="10" BackgroundColor="White">
+
+                <Frame IsClippedToBounds="true" x:Name="frameButton"  BackgroundColor="#fcbf49" HeightRequest="60" Padding="0" HasShadow="True" CornerRadius="30"  >
+                    <StackLayout IsClippedToBounds="true" x:Name="frameInsideStacklayout" Padding="-20" Orientation="Horizontal" HeightRequest="60" HorizontalOptions="FillAndExpand" VerticalOptions="Fill" Spacing="0">
+
+                        <Button x:Name="CandituresButton"  Margin="15,0,0,0" HeightRequest="60"  HorizontalOptions="StartAndExpand" 
+                        BorderColor="Transparent"
+                  BorderRadius="0"
+                     TextColor="Black"
+                        FontSize="12"
+                    Text="{strings:Translate candidature}"
+                        FontAttributes="Bold"
+                       Clicked="canditureClicked"
+                            
+   
+                        
+                    BackgroundColor="#fcbf49"
+                    
+                            
+                         />
+
+
+
+                        <Button  x:Name="leadersButton" Margin="0,0,15,0" HeightRequest="60"  HorizontalOptions="EndAndExpand" 
+                        BorderColor="Transparent"
+                  BorderRadius="0"
+                     TextColor="Black"
+                        FontSize="12"
+                    Text="{strings:Translate leaders}"
+                        
+                        FontAttributes="Bold"
+                Clicked="leadersClicked"
+                    BackgroundColor="#fcbf49"
+                    
+                            
+                          />
+
+
+
+
+                    </StackLayout>
+                </Frame>
+
+              
+            </StackLayout>
+
+
+
+
+
+
+           
+                <WebView  WidthRequest="97" x:Name="partyGraph" VerticalOptions="FillAndExpand">
+                            <WebView.Source>
+                                <HtmlWebViewSource x:Name="d"  />
+                            </WebView.Source>   
+                        </WebView>
+
+                       
+
+                <WebView  HeightRequest="97" WidthRequest="97" x:Name="leaderGraph" VerticalOptions="FillAndExpand">
+                    <WebView.Source>
+                        <HtmlWebViewSource x:Name="e"  />
+                    </WebView.Source>
+                </WebView>
+
+       
+
+
+
+
+
+            </StackLayout>
+
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

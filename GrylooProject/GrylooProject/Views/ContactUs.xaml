@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GrylooProject.Views.ContactUs"
+              xmlns:strings="clr-namespace:GrylooProject;assembly=GrylooProject"
+             xmlns:custom="clr-namespace:GrylooProject.CustomControls;assembly=GrylooProject">
+    <ContentPage.Content>
+
+        <ScrollView>
+            <StackLayout BackgroundColor="White">
+
+                <StackLayout BackgroundColor="#007f4f" HeightRequest="200" >
+
+
+
+                    <Image Margin="0,25,0,0" HeightRequest="100" WidthRequest="100" Source="logo.png" HorizontalOptions="Center" VerticalOptions="Center"/>
+
+
+
+                </StackLayout>
+
+                <StackLayout Margin="20" Padding="0" HeightRequest="200">
+
+                    <Label Margin="10" Text="{strings:Translate contactUs}" FontAttributes="Bold" FontSize="16" VerticalOptions="Start" TextColor="Black" HorizontalOptions="CenterAndExpand"  />
+
+                    <Frame View.VerticalOptions="FillAndExpand" OutlineColor="#ebebeb" BackgroundColor="#ebebeb" CornerRadius="20"
+              Padding="0">
+
+              <custom:BorderlessEditor Margin="15,20,10,20"  x:Name="txtDesc"
+                         HorizontalOptions="FillAndExpand"
+                         Focused="NotesEditor_Focused" Unfocused="NotesEditor_Unfocused"
+                       
+                          View.VerticalOptions="FillAndExpand"
+                           BackgroundColor="#ebebeb"/>
+
+                </Frame>
+
+
+                   
+
+                </StackLayout>
+
+                <Button HeightRequest="60" WidthRequest="140" HorizontalOptions="Center" Margin="0,10,0,10"
+                        BorderColor="Transparent"
+                  BorderRadius="15"
+                     TextColor="Black"
+                        FontSize="14"
+                    Text="{strings:Translate send}"
+                        
+                       Clicked="SendButtonClicked"
+                
+                    BackgroundColor="#fcbf49"
+                    
+                            
+                          />
+
+
+            </StackLayout>
+
+        </ScrollView>
+
+    </ContentPage.Content>
+</ContentPage>

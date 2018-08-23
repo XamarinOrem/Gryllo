@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GrylooProject.Views.ChartsNamePage"
+              xmlns:strings="clr-namespace:GrylooProject;assembly=GrylooProject"
+             xmlns:scroll="clr-namespace:Xamarin.Forms.Extended;assembly=Xamarin.Forms.Extended.InfiniteScrolling"
+              xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms">
+  <ContentPage.Content>
+
+    <StackLayout BackgroundColor="#d4d4d4" >
+      
+      <ListView x:Name="myList"
+        CachingStrategy="RecycleElement"
+       
+        SeparatorVisibility="None"
+        BackgroundColor="#d4d4d4"
+         ItemTapped="ListView_OnItemTapped"
+        HasUnevenRows="true"
+    
+      
+              >
+        <ListView.Behaviors>
+          <scroll:InfiniteScrollBehavior/>
+        </ListView.Behaviors>
+        <ListView.ItemTemplate>
+          <DataTemplate>
+            <ViewCell>
+              <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand" View.VerticalOptions="FillAndExpand" >
+            
+              
+                <!--<Frame Margin="10,10,10,2" BackgroundColor="White"  Padding="0" HasShadow="True" CornerRadius="0"  >-->
+                                <StackLayout Orientation="Vertical"   HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+                                    <Grid x:Name="Item" Padding="55,15,8,8" RowSpacing="0" ColumnSpacing="0">
+
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+
+
+
+                                        </Grid.RowDefinitions>
+
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="80" />
+                                            <ColumnDefinition Width="*" />
+                                           
+                                        </Grid.ColumnDefinitions>
+
+
+                                        <StackLayout View.HorizontalOptions="Start"  Grid.Column="0" View.VerticalOptions="FillAndExpand">
+
+
+
+ 
+                                          <Image Aspect="Fill" HorizontalOptions="Start" VerticalOptions="Center" HeightRequest="30" WidthRequest="30" Margin="0,0,0,0" Source="{Binding img}"></Image>
+                                        </StackLayout>
+
+                                        <StackLayout Padding="-15,0,0,0"  Grid.Column="1" View.HorizontalOptions="StartAndExpand" View.VerticalOptions="Center">
+
+                                            <Label HorizontalOptions="Start" LineBreakMode="WordWrap" Text="{Binding ChartName}" HorizontalTextAlignment="Start" 
+                                            
+                                             FontAttributes="Bold"  VerticalTextAlignment="Start" TextColor="Black" FontSize="20"  />
+
+                                         
+                                        </StackLayout>
+
+                                      
+
+
+                                    </Grid>
+
+                                </StackLayout>
+
+                            <!--</Frame>-->
+            
+              </StackLayout>
+            </ViewCell>
+          </DataTemplate>
+        </ListView.ItemTemplate>
+
+
+      </ListView>
+
+
+    </StackLayout>
+
+
+  </ContentPage.Content>
+</ContentPage>

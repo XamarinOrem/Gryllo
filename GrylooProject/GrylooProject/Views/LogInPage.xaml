@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GrylooProject.Views.LogInPage"
+             xmlns:strings="clr-namespace:GrylooProject;assembly=GrylooProject"
+             xmlns:local="clr-namespace:GrylooProject.CustomControls"
+             BackgroundImage="splashLogin">
+    <ContentPage.Content>
+        <StackLayout   Padding="20" Spacing="0">
+
+
+            <StackLayout VerticalOptions="Start" Margin="0,30,0,0" HorizontalOptions="CenterAndExpand">
+                <Image HorizontalOptions="CenterAndExpand" VerticalOptions="Center"
+               HeightRequest="130"  Margin="0,0,0,0" Aspect="AspectFit" Source="logo" >
+
+                </Image>
+            </StackLayout>
+
+
+            <StackLayout Spacing="15" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Margin="20,30,20,20">
+
+                <Frame  x:Name="logInFrame" Margin="0,5,0,0"  BackgroundColor="#007f4f" HeightRequest="55" Padding="0" HasShadow="True" CornerRadius="15"  >
+
+                    <local:ImageEntry x:Name="txtLogInMobile" BackgroundColor="Transparent" TextColor="White"
+                       PlaceholderColor="White"
+                       Keyboard="Telephone"
+                       Margin="10,5,10,0"
+                       VerticalOptions="EndAndExpand"
+                       Image="call"
+                       Placeholder="{strings:Translate LogInMobile}"
+                       
+               HorizontalOptions="FillAndExpand"/>
+
+                 
+
+                </Frame>
+
+               
+
+                <!--<Frame x:Name="dobFrame" BackgroundColor="Transparent" HeightRequest="55" Padding="0" HasShadow="True" CornerRadius="15"  >
+                    <local:ImageEntry x:Name="txtLoginDOB" TextColor="White"
+                       PlaceholderColor="White"
+                      
+                        Margin="10,5,0,0"
+                       VerticalOptions="EndAndExpand"
+                       Image="cake"
+                       Placeholder="{strings:Translate LoginDOB}"
+                        Focused="txtLoginDOB_Focused"
+               HorizontalOptions="FillAndExpand"/>
+
+                </Frame>
+
+                <DatePicker x:Name="DOBPicker"
+                
+                IsEnabled="True"
+                IsVisible="False"/>-->
+
+                <Button HeightRequest="60" WidthRequest="140" HorizontalOptions="Center" Margin="0,10,0,0"
+                        BorderColor="Transparent"
+                  BorderRadius="15"
+                     TextColor="Black"
+                        FontSize="14"
+                    Text="{strings:Translate LoginButton}"
+                        
+                        Clicked="Login_Clicked"
+                
+                    BackgroundColor="#fcbf49"
+                    
+                            
+                          />
+
+
+
+                <Button x:Name="gstBtn" HeightRequest="60" WidthRequest="140" HorizontalOptions="Center"
+                        
+                  BorderRadius="15"
+                     TextColor="White"
+                    Text="{strings:Translate LoginGuest}"
+                Clicked="LoginGuestClicked"
+                         BackgroundColor="Transparent"
+                          BorderColor="White"
+                        BorderWidth="1"
+                          />
+
+
+
+            </StackLayout>
+
+
+
+            <Label
+                Text="{strings:Translate LoginCreateAccn}"
+                TextColor="#fcbf49"
+                FontSize="18"
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="EndAndExpand">
+
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer
+                
+                     Tapped="LoginCreateAccount_Clicked"
+                    NumberOfTapsRequired="1" />
+
+                </Label.GestureRecognizers>
+
+               
+
+            </Label>
+
+
+
+
+
+
+
+
+
+
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

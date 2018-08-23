@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                xmlns:local="clr-namespace:GrylooProject.CustomControls"
+             x:Class="GrylooProject.Views.MakePremium">
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout BackgroundColor="White">
+
+                 
+
+
+                <StackLayout Margin="20">
+                    <Label Margin="10,0,0,0" Text="Select Package"   FontSize="16" VerticalOptions="Start" TextColor="Black" HorizontalOptions="StartAndExpand"  />
+                    <Frame  BackgroundColor="#007f4f" HeightRequest="55" Padding="0" HasShadow="True" CornerRadius="15"  >
+                        <local:ImageEntry   BackgroundColor="Transparent" TextColor="White"
+                       PlaceholderColor="White" Placeholder="Select Package" FontSize="16"
+                       Margin="10,5,0,0"
+                       VerticalOptions="EndAndExpand" Focused="txt_Focused"
+                       Image="dropdown_white" 
+                        HorizontalOptions="FillAndExpand"/>
+                    </Frame>
+
+                    <Picker   IsEnabled="True"
+                IsVisible="False"  Title="Select Package" x:Name="PlanPicker1" />
+                    
+                    
+                    
+                    
+                    <Label Margin="10,0,0,0" Text="Time"   FontSize="16" VerticalOptions="Start" TextColor="Black" HorizontalOptions="StartAndExpand"  />
+                    <Frame  BackgroundColor="#007f4f" HeightRequest="55" Padding="0" HasShadow="True" CornerRadius="15"  >
+                        <local:ImageEntry   BackgroundColor="Transparent" TextColor="White"
+                       PlaceholderColor="White" Placeholder="Package Time" FontSize="16"
+                       Margin="10,5,0,0"
+                                            Image="time"
+                       VerticalOptions="EndAndExpand"
+                        HorizontalOptions="FillAndExpand"/>
+                    </Frame>
+
+                    <Label Margin="10,0,0,0" Text="Price"   FontSize="16" VerticalOptions="Start" TextColor="Black" HorizontalOptions="StartAndExpand"  />
+                    <Frame  BackgroundColor="#007f4f" HeightRequest="55" Padding="0" HasShadow="True" CornerRadius="15"  >
+                        <local:ImageEntry  BackgroundColor="Transparent" TextColor="White"
+                       PlaceholderColor="White" Placeholder="Package Price" FontSize="16"
+                       Margin="10,5,0,0" Image="price"
+                       VerticalOptions="EndAndExpand"
+                        HorizontalOptions="FillAndExpand"/>
+                    </Frame>
+                </StackLayout>
+
+                <Button HeightRequest="60" WidthRequest="180"  HorizontalOptions="Center" Margin="0,10,0,10"
+                        BorderColor="Transparent"
+                  BorderRadius="15"
+                     TextColor="Black"
+                        FontSize="14"
+                    Text="Take Package"
+                        
+                       
+                
+                    BackgroundColor="#fcbf49"
+                    
+                            
+                          />
+
+
+            </StackLayout>
+
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

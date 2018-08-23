@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GrylooProject.Views.DateAndTime"
+              xmlns:controls="clr-namespace:XamForms.Controls;assembly=XamForms.Controls.Calendar" BackgroundColor="White">
+    <!--<ContentPage.Content>
+     
+        <StackLayout Padding="0" Orientation="Vertical" VerticalOptions="FillAndExpand">
+            <ScrollView>
+                <StackLayout Spacing="10"  VerticalOptions="FillAndExpand">
+                    <StackLayout Padding="15,10,15,10">
+                        <controls:Calendar x:Name="cal"
+			Padding="10,0,10,10"
+      BorderColor="White"
+      BackgroundColor="White"
+      SelectedTextColor="White"
+      SelectedBackgroundColor="#9B9B9B"
+      SelectedBorderColor="#9B9B9B"
+      BorderWidth="0"
+			SelectedBorderWidth="1" 
+			DisabledBorderColor="Black"
+			ShowNumberOfWeek="false"
+			StartDay="Monday"
+			TitleLabelTextColor="Black"
+			TitleLeftArrowTextColor="Black"
+      TitleRightArrowTextColor="Black"
+
+			SpecialDates="{Binding Attendances}"
+			DateCommand="{Binding DateChosen}" >
+                        </controls:Calendar>
+                    </StackLayout>
+                 
+                </StackLayout>
+            </ScrollView>
+            <StackLayout VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand"  BackgroundColor="Black">
+                <Button Clicked="Next_Button" Text="Next"  HeightRequest="80" TextColor="White" BackgroundColor="Black" Font="20"></Button>
+            </StackLayout>
+        </StackLayout>
+
+    </ContentPage.Content>-->
+</ContentPage>

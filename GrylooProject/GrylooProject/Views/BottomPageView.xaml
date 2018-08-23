@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xf:BottomBarPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:Views="clr-namespace:GrylooProject.Views;assembly=GrylooProject"
+                   xmlns:strings="clr-namespace:GrylooProject;assembly=GrylooProject"
+                  xmlns:xf="clr-namespace:BottomBar.XamarinForms;assembly=BottomBar.XamarinForms"
+             x:Class="GrylooProject.Views.BottomPageView"  BarBackgroundColor="#007f4f" BarTextColor="White">
+
+  <NavigationPage Title="{strings:Translate home}" Icon="homeTabbed.png" >
+    <x:Arguments>
+      <Views:TestPage />
+    </x:Arguments>
+  </NavigationPage>
+
+  <NavigationPage Title="{strings:Translate result}"  Icon="chartsTabbed.png">
+    <x:Arguments>
+      <Views:Category />
+    </x:Arguments>
+
+  </NavigationPage>
+
+
+  <NavigationPage Title="{strings:Translate candidature}" Icon="partiesTabbed.png">
+    <x:Arguments>
+      <Views:VotePartiesPage />
+    </x:Arguments>
+
+  </NavigationPage>
+
+  <NavigationPage Title="{strings:Translate leaders}" Icon="leadersTabbed.png">
+    <x:Arguments>
+      <Views:RateLeadersPage />
+    </x:Arguments>
+  </NavigationPage>
+
+
+  <NavigationPage  Title="{strings:Translate configure}" Icon="settingsTabbed.png" >
+    <x:Arguments>
+      <Views:SettingPage   />
+
+    </x:Arguments>
+  </NavigationPage>
+
+
+
+
+</xf:BottomBarPage>
+

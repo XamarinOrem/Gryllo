@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GrylooProject.Views.RateLeaderPopUpPage"
+              xmlns:rating="clr-namespace:Syncfusion.SfRating.XForms;assembly=Syncfusion.SfRating.XForms"
+                   xmlns:strings="clr-namespace:GrylooProject;assembly=GrylooProject"
+              xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+              xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup">
+  
+    
+    
+    <ScrollView
+  HorizontalOptions="Center"
+  VerticalOptions="Center">
+        <AbsoluteLayout>
+
+            <Frame
+        x:Name="FrameContainer"
+        HorizontalOptions="CenterAndExpand"
+                CornerRadius="15"
+        BackgroundColor="#efeded">
+              
+                <StackLayout
+                    x:Name="LayoutContainer"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    BackgroundColor="#efeded"
+                    Orientation="Vertical"
+                     IsClippedToBounds="True"
+                    Padding="3"
+                    Spacing="10">
+
+                   <Label VerticalOptions="Start" Text="{strings:Translate rateLeader}" TextColor="Black" FontSize="Medium" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" />
+
+
+                  <Label x:Name="ratingVal" VerticalOptions="Start" Text="5" TextColor="Black" FontSize="Medium" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" />
+
+                  
+               
+                  <Slider Margin="0,-5,0,0" x:Name="rateSlider" Maximum="{Binding MaximumZoom}" Minimum="{Binding MinimumZoom}" Value="{Binding CurrentZoom}" />
+
+                  <StackLayout Margin="0,-15,0,0" Orientation="Horizontal" VerticalOptions="FillAndExpand" HorizontalOptions="CenterAndExpand" >
+                    <Button  x:Name="BackButton" VerticalOptions="End"   HeightRequest="50"  HorizontalOptions="Start" Margin="0,10,0,0"
+                      BorderColor="Transparent"
+                BorderRadius="15"
+                   TextColor="Black"
+                      FontSize="14"
+                  Text="{strings:Translate back}"
+                        
+                  Clicked="BackClicked"
+                
+                  BackgroundColor="#fcbf49"
+                    
+                            
+                          />
+
+
+                    <Button  x:Name="DoneButton" VerticalOptions="End"   HeightRequest="50"  HorizontalOptions="End" Margin="0,10,0,0"
+                        BorderColor="Transparent"
+                  BorderRadius="15"
+                     TextColor="Black"
+                        FontSize="14"
+                    Text="{strings:Translate rate}"
+                        
+                      Clicked="RateSubmitClicked"
+                
+                    BackgroundColor="#fcbf49"
+                    
+                            
+                          />
+
+                
+           
+                </StackLayout>
+                
+                  </StackLayout>
+            </Frame>
+        </AbsoluteLayout>
+    </ScrollView>
+
+
+
+</pages:PopupPage>

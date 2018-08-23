@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:strings="clr-namespace:GrylooProject;assembly=GrylooProject" x:Class="GrylooProject.Views.MyProfilePage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout BackgroundColor="White">
+                <StackLayout BackgroundColor="#007f4f" HeightRequest="110">
+                    <Image Margin="0,10,0,0" HeightRequest="70" WidthRequest="70" Source="logo.png" HorizontalOptions="Center" VerticalOptions="Center" />
+                </StackLayout>
+                <!--<StackLayout BackgroundColor="White" Orientation="Vertical" Margin="10" Padding="5" Spacing="5" >
+
+                    <Label Text="Phone Number "  TextColor="#007f4f" FontAttributes="Bold" FontSize="16"
+                                        HorizontalOptions="Start"    />
+
+
+                    <Label Text="+917903639133"  TextColor="Black" FontAttributes="Bold" FontSize="16"
+                                        HorizontalOptions="Start"   />
+
+
+                </StackLayout>
+
+                <BoxView Margin="2" HeightRequest="0.5" BackgroundColor="Gray" HorizontalOptions="FillAndExpand"     />-->
+                <StackLayout BackgroundColor="White" Orientation="Vertical" Margin="10" Padding="5" Spacing="5">
+                    <Label Text="{strings:Translate yearOfBirth}" TextColor="#007f4f" FontAttributes="Bold" FontSize="16" HorizontalOptions="Start" />
+                    <Label x:Name="yearOfBirthText" TextColor="Black" FontAttributes="Bold" FontSize="16" HorizontalOptions="Start" />
+                </StackLayout>
+
+
+                <BoxView Margin="2,2,2,4" HeightRequest="0.5" BackgroundColor="Gray" HorizontalOptions="FillAndExpand" />
+
+
+                <StackLayout BackgroundColor="White" Orientation="Horizontal" Margin="10" Padding="5" Spacing="0">
+                    <StackLayout Orientation="Vertical">
+                        <Label Text="{strings:Translate postalCode}" TextColor="#007f4f" FontAttributes="Bold" FontSize="16" HorizontalOptions="Start" />
+                        <Label x:Name="postalCodeText" TextColor="Black" FontAttributes="Bold" FontSize="16" HorizontalOptions="Start" />
+                    </StackLayout>
+                    <StackLayout HorizontalOptions="EndAndExpand" BackgroundColor="White">
+                        <Button HeightRequest="60" WidthRequest="140" VerticalOptions="Center" HorizontalOptions="EndAndExpand" Margin="0,0,0,0" BorderColor="Transparent" BorderRadius="15" TextColor="Black" FontSize="14" Text="{strings:Translate EdProfileChangeButton}"
+                            Clicked="changeButtonClicked" BackgroundColor="#fcbf49" />
+                    </StackLayout>
+                </StackLayout>
+
+
+                <BoxView Margin="2,4,2,2" HeightRequest="0.5" BackgroundColor="Gray" HorizontalOptions="FillAndExpand" />
+
+
+                <StackLayout BackgroundColor="White" Orientation="Vertical" Margin="10" Padding="5" Spacing="5">
+                    <Label Text="{strings:Translate province}" TextColor="#007f4f" FontAttributes="Bold" FontSize="16" HorizontalOptions="Start" />
+                    <Label x:Name="provinceText" TextColor="Black" FontAttributes="Bold" FontSize="16" HorizontalOptions="Start" />
+                </StackLayout>
+
+
+                <BoxView Margin="2,2,2,4" HeightRequest="0.5" BackgroundColor="Gray" HorizontalOptions="FillAndExpand" />
+
+                
+
+                <StackLayout BackgroundColor="White" Orientation="Horizontal" Margin="10" Spacing="0">
+                    <StackLayout Orientation="Vertical">
+                        <Label x:Name="PremimumLbl" Margin="0,15,0,0" Text="{strings:Translate makePremimum}" TextColor="#007f4f" FontAttributes="Bold" FontSize="16" HorizontalOptions="Start" />
+                    </StackLayout>
+                    <StackLayout HorizontalOptions="EndAndExpand" BackgroundColor="White">
+                        <Label Margin="0,15,0,0" x:Name="expDateLbl" Text="" TextColor="#007f4f" FontAttributes="Bold" FontSize="16" HorizontalOptions="End" />
+                    </StackLayout>
+                    <StackLayout x:Name="ButtonLayout" HorizontalOptions="EndAndExpand" BackgroundColor="White">
+                        <Button HeightRequest="60" WidthRequest="140" VerticalOptions="Center" HorizontalOptions="EndAndExpand" BorderColor="Transparent" BorderRadius="15" TextColor="Black" FontSize="14" Text="{strings:Translate payNow}" Clicked="UserType_Clicked"
+                            BackgroundColor="#fcbf49" />
+                    </StackLayout>
+                </StackLayout>
+
+                
+
+                <BoxView VerticalOptions="End" Margin="1" HeightRequest="0.5" BackgroundColor="Gray" HorizontalOptions="FillAndExpand" />
+
+
+                
+
+            </StackLayout>
+
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

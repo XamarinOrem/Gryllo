@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                     xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+                  xmlns:strings="clr-namespace:GrylooProject;assembly=GrylooProject"
+             x:Class="GrylooProject.Views.VoteAlertPopup">
+    <ScrollView
+  HorizontalOptions="Center"
+  VerticalOptions="Center">
+        <AbsoluteLayout>
+
+            <Frame
+        x:Name="FrameContainer"
+        HorizontalOptions="CenterAndExpand"
+                CornerRadius="15"
+        BackgroundColor="#efeded">
+
+                <StackLayout
+                    x:Name="LayoutContainer"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    BackgroundColor="#efeded"
+                    Orientation="Vertical"
+                     IsClippedToBounds="True"
+                    Padding="3"
+                    Spacing="10">
+
+                    <Label FontAttributes="Bold" Margin="10,0,0,0"  FontSize="16" VerticalOptions="StartAndExpand" x:Name="magText" TextColor="Black"  HorizontalOptions="Center" />
+
+                 
+                    <Button  x:Name="YesButton" VerticalOptions="End"   HeightRequest="50"  HorizontalOptions="Center"
+                    BorderColor="Transparent"
+              BorderRadius="15"
+                 TextColor="Black"
+                    FontSize="14"
+                Text="{strings:Translate ok}"
+                      
+                BackgroundColor="Green"
+                Clicked="okButton_Clicked"
+                            
+                          />
+                
+
+
+
+
+
+                   
+
+                </StackLayout>
+            </Frame>
+        </AbsoluteLayout>
+    </ScrollView>
+</pages:PopupPage>

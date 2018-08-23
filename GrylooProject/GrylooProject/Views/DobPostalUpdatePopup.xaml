@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GrylooProject.Views.DobPostalUpdatePopup"
+                   xmlns:local="clr-namespace:GrylooProject.CustomControls"
+                 xmlns:strings="clr-namespace:GrylooProject;assembly=GrylooProject"
+                   xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup">
+
+
+    <ScrollView
+  HorizontalOptions="Center"
+  VerticalOptions="Center">
+        <AbsoluteLayout>
+
+            <Frame
+  x:Name="FrameContainer"
+  HorizontalOptions="CenterAndExpand"
+          CornerRadius="15"
+  BackgroundColor="#efeded">
+
+                <StackLayout
+            x:Name="LayoutContainer"
+            HorizontalOptions="CenterAndExpand"
+            VerticalOptions="FillAndExpand"
+            BackgroundColor="#efeded"
+            Orientation="Vertical"
+             IsClippedToBounds="True"
+            Padding="3"
+            Spacing="10">
+
+                    <StackLayout  Spacing="10" Margin="5" HorizontalOptions="FillAndExpand" Orientation="Vertical">
+
+                        <Label HorizontalOptions="Center" Text="{strings:Translate Updatedetails}"></Label>
+                        <Frame BackgroundColor="#007f4f" HeightRequest="55" Padding="0" HasShadow="True" CornerRadius="15"  >
+                            <local:ImageEntry x:Name="txtCreateNwAccnDOB" TextColor="White"
+                       PlaceholderColor="White"
+                      
+                        Focused="txtLoginDOB_Focused"
+                       Margin="10,5,0,0"
+                       VerticalOptions="EndAndExpand"
+                       Image="cake"
+                       Placeholder="{strings:Translate LoginDOB}"
+        
+               HorizontalOptions="FillAndExpand"/>
+
+                        </Frame>
+                        <Picker   IsEnabled="True"
+                IsVisible="False"  Title="Select Year" x:Name="DOBPicker1" />
+
+                        <Frame BackgroundColor="#007f4f" HeightRequest="55" Padding="0" HasShadow="True" CornerRadius="15"  >
+                            <local:ImageEntry x:Name="txtCreateNwAccnPostalCode" TextColor="White"
+                       PlaceholderColor="White"
+                      Keyboard="Numeric"
+         
+                       Margin="10,5,0,0"
+                       VerticalOptions="EndAndExpand"
+                       Image="postal"
+                       Placeholder="{strings:Translate CreateNwAccnPostalCode}"
+        
+               HorizontalOptions="FillAndExpand"/>
+
+                        </Frame>
+
+
+                    </StackLayout>
+
+
+
+
+
+
+                         <StackLayout Orientation="Horizontal" Spacing="10" HorizontalOptions="Center">
+
+
+                            <StackLayout Spacing="5" Orientation="Horizontal" HorizontalOptions="StartAndExpand" >
+                                <Image Margin="0,0,10,0"  x:Name="maleButton" Source="radiobuttonnormal.png" BindingContext="0" HeightRequest="20" WidthRequest="20" >
+
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer
+                
+                                Tapped="maleButton_Clicked"
+                                NumberOfTapsRequired="1" />
+
+                                    </Label.GestureRecognizers>
+
+
+                                </Image>
+
+
+                                <Image Margin="-15,0,0,0"  Source="male" HorizontalOptions="Start" HeightRequest="20" WidthRequest="20" />
+
+                                <Label Text="{strings:Translate CreateNwAccnMale}" TextColor="Black" FontSize="14" HorizontalTextAlignment="Start" HorizontalOptions="Start" />
+
+
+                            </StackLayout>
+
+
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="End" Spacing="5" >
+                                <Image Margin="5,0,10,0" HorizontalOptions="End"  x:Name="femaleButton" Source="radiobuttonnormal.png" BindingContext="0" HeightRequest="20" WidthRequest="20" >
+
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer
+                
+                                Tapped="femaleButton_Clicked"
+                                NumberOfTapsRequired="1" />
+
+                                    </Label.GestureRecognizers>
+
+
+                                </Image>
+
+
+
+                                <Image Margin="-15,0,0,0"  Source="female" HorizontalOptions="End" HeightRequest="20" WidthRequest="20" />
+
+                                <Label Text="{strings:Translate CreateNwAccnFemale}" TextColor="Black" FontSize="14" HorizontalTextAlignment="End" HorizontalOptions="Start" />
+
+
+                            </StackLayout>
+
+
+                        </StackLayout>
+
+
+
+
+
+
+                    
+
+                    <StackLayout  Margin="0,-15,0,0" Orientation="Horizontal" VerticalOptions="FillAndExpand" HorizontalOptions="CenterAndExpand" >
+                        <Button  x:Name="submitButton" VerticalOptions="End"   HeightRequest="50"  HorizontalOptions="Start" Margin="0,10,0,0"
+          BorderColor="Transparent"
+    BorderRadius="15"
+       TextColor="Black"
+          FontSize="14"
+      Text="{strings:Translate submit}"
+      BackgroundColor="Green" Clicked="submitButton_Clicked"
+                   
+                          />
+
+
+
+
+
+                    </StackLayout>
+
+                </StackLayout>
+            </Frame>
+        </AbsoluteLayout>
+    </ScrollView>
+
+
+</pages:PopupPage>

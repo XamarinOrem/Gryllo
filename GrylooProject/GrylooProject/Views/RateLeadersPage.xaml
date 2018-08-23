@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GrylooProject.Views.RateLeadersPage"
+              xmlns:strings="clr-namespace:GrylooProject;assembly=GrylooProject"
+             xmlns:scroll="clr-namespace:Xamarin.Forms.Extended;assembly=Xamarin.Forms.Extended.InfiniteScrolling"
+              xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms">
+    <ContentPage.Content>
+
+        <StackLayout BackgroundColor="#d4d4d4" >
+
+            <ListView x:Name="myList"
+              CachingStrategy="RecycleElement"
+              ItemsSource="{Binding Items}"
+              SeparatorVisibility="None"
+              BackgroundColor="#d4d4d4"
+              IsPullToRefreshEnabled="true"
+              HasUnevenRows="true"
+              ItemTapped="ListView_OnItemTapped"
+              Refreshing="list_refreshing"
+              >
+                <ListView.Behaviors>
+                    <scroll:InfiniteScrollBehavior/>
+                </ListView.Behaviors>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand" View.VerticalOptions="FillAndExpand" >
+                                <Frame HasShadow="false" Margin="10,10,10,2" BackgroundColor="White"  Padding="0"  CornerRadius="0"  >
+                                    <StackLayout Orientation="Vertical" BackgroundColor="White"  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+                                        <Grid x:Name="Item" Padding="8" RowSpacing="0" ColumnSpacing="0" BackgroundColor="White">
+
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto"/>
+
+
+
+                                            </Grid.RowDefinitions>
+
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="80" />
+                                                <ColumnDefinition Width="*" />
+                                                <ColumnDefinition Width="80" />
+                                            </Grid.ColumnDefinitions>
+
+
+                                            <StackLayout View.HorizontalOptions="Start"  Grid.Column="0" View.VerticalOptions="FillAndExpand">
+
+                                                <ffimageloading:CachedImage LoadingPlaceholder="placeholderForLeader.png" Aspect="Fill" HorizontalOptions="Start" VerticalOptions="Center" HeightRequest="60" WidthRequest="60" Margin="0,0,0,0" Source="{Binding leaderImg}">
+                                                </ffimageloading:CachedImage>
+
+                                      
+
+                                            </StackLayout>
+
+                                            <StackLayout Padding="5,0,0,0"  Grid.Column="1" View.HorizontalOptions="StartAndExpand" View.VerticalOptions="Center">
+
+                                                <Label HorizontalOptions="Start" Text="{Binding leaderName}" FontAttributes="Bold" LineBreakMode="NoWrap" HorizontalTextAlignment="Start" 
+                                            
+                                              VerticalTextAlignment="Start"  TextColor="Black" FontSize="{Binding fontSize}"  />
+
+
+                                                <Label HorizontalOptions="StartAndExpand" Text="You have not rated this leader for last 30 days!" IsVisible="{Binding labelStatus}"
+
+                                             HorizontalTextAlignment="Start" VerticalTextAlignment="Start" TextColor="Red" FontSize="12" />
+
+
+                                            </StackLayout>
+
+                                            <StackLayout Grid.Column="2"   Padding="0"  Orientation="Horizontal" View.HorizontalOptions="End" View.VerticalOptions="Center">
+
+
+
+
+                                                <Image HorizontalOptions="EndAndExpand" Source="{Binding rateImg}" VerticalOptions="Center" HeightRequest="30" Margin="0,0,0,0">
+                                                   
+                                                    <Image.GestureRecognizers>
+                                                        <TapGestureRecognizer
+                                                       BindingContext="{Binding Source={x:Reference myList}, Path=BindingContext}" Command="{Binding btnRateCommond}" 
+                                                        CommandParameter="{Binding Source={x:Reference Item}, Path=BindingContext}"                               
+                                                         />
+                                                    </Image.GestureRecognizers>
+
+
+                                                </Image>
+
+                                            </StackLayout>
+
+
+                                        </Grid>
+
+                                    </StackLayout>
+
+                                </Frame>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+                <ListView.Footer>
+                    <Grid Padding="4" IsVisible="{Binding IsLoadingMore}">
+                        <!-- set the footer to have a zero height when invisible -->
+                        <Grid.Triggers>
+                            <Trigger TargetType="Grid" Property="IsVisible" Value="False">
+                                <Setter Property="HeightRequest" Value="0" />
+                            </Trigger>
+                        </Grid.Triggers>
+                        <!-- the loading content -->
+                        <ActivityIndicator
+                              IsRunning="true"
+                              Color="Black"
+                              WidthRequest="20"
+                              HeightRequest="20"/>      
+
+                    </Grid>
+                </ListView.Footer>
+            </ListView>
+            
+            
+        </StackLayout>
+
+
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GrylooProject.Views.ShareApp">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical">
+
+            <StackLayout VerticalOptions="CenterAndExpand">
+            <Label Text="Share the link of the Application" FontAttributes="Bold" FontSize="Medium"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="Center" />
+
+            <Button HeightRequest="60" WidthRequest="140" HorizontalOptions="Center" Margin="0,10,0,0"
+                        BorderColor="Transparent"
+                  BorderRadius="15"
+                     TextColor="Black"
+                        FontSize="14"
+                    Text="Share"
+                        
+                        Clicked="share_Clicked"
+                
+                    BackgroundColor="#fcbf49"
+                    
+                            
+                          />
+            </StackLayout>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

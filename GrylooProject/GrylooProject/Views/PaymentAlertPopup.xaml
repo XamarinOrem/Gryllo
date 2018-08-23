@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GrylooProject.Views.PaymentAlertPopup"
+                     xmlns:local="clr-namespace:GrylooProject.CustomControls"
+                 xmlns:strings="clr-namespace:GrylooProject;assembly=GrylooProject"
+                   xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup">
+  <ScrollView
+  HorizontalOptions="Center"
+  VerticalOptions="Center">
+    <AbsoluteLayout>
+
+      <Frame
+  x:Name="FrameContainer"
+  HorizontalOptions="CenterAndExpand"
+          CornerRadius="15"
+  BackgroundColor="#efeded">
+
+        <StackLayout
+            x:Name="LayoutContainer"
+            HorizontalOptions="CenterAndExpand"
+            VerticalOptions="FillAndExpand"
+            BackgroundColor="#efeded"
+            Orientation="Vertical"
+             IsClippedToBounds="True"
+            Padding="3"
+            Spacing="10">
+
+          <StackLayout  Spacing="10" Margin="5" HorizontalOptions="FillAndExpand" Orientation="Vertical">
+                        
+                        <Label HorizontalOptions="Center" Text="{strings:Translate stripeGetway}"></Label>
+                        <Label  FontSize="16" x:Name="priceTxt" HorizontalOptions="Center" FontAttributes="Bold"></Label>
+            <local:CustomEntry x:Name="txtcardNumber" PlaceholderColor="Gray" HorizontalTextAlignment="Start" BackgroundColor="#FFFFFF" Placeholder="{strings:Translate cardNumber}" FontSize="14" Keyboard="Numeric" TextColor="Black" View.HorizontalOptions="FillAndExpand"  />
+            <local:CustomEntry x:Name="txtCVVNumber" PlaceholderColor="Gray" HorizontalTextAlignment="Start" BackgroundColor="#FFFFFF" Placeholder="{strings:Translate CVV}" Keyboard="Numeric" FontSize="14" TextColor="Black" View.HorizontalOptions="FillAndExpand"  />
+            <StackLayout Spacing="0" Margin="0" HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+              <local:CustomEntry x:Name="txtMonth" PlaceholderColor="Gray" HorizontalTextAlignment="Start" BackgroundColor="#FFFFFF" Placeholder="{strings:Translate pMonth}" FontSize="14" TextColor="Black" View.HorizontalOptions="FillAndExpand"  Keyboard="Numeric" />
+              <Label TextColor="Black" Margin="10,0,10,0" HeightRequest="50" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Text="/" FontSize="14" View.HorizontalOptions="Center" />
+              <local:CustomEntry x:Name="txtYear" PlaceholderColor="Gray" HorizontalTextAlignment="Start" BackgroundColor="#FFFFFF" Placeholder="{strings:Translate pYear}" FontSize="14" TextColor="Black" View.HorizontalOptions="FillAndExpand"  Keyboard="Numeric" />
+            </StackLayout>
+          </StackLayout>
+
+          <StackLayout  Margin="0,-15,0,0" Orientation="Horizontal" VerticalOptions="FillAndExpand" HorizontalOptions="CenterAndExpand" >
+            <Button  x:Name="NoButton" VerticalOptions="End"   HeightRequest="50"  HorizontalOptions="Start" Margin="0,10,0,0"
+          BorderColor="Transparent"
+    BorderRadius="15"
+       TextColor="Black"
+          FontSize="14"
+      Text="{strings:Translate cancel}"
+      BackgroundColor="Red"
+                     Clicked="NoButton_Clicked"
+                          />
+
+
+            <Button  x:Name="YesButton" VerticalOptions="End"   HeightRequest="50"  HorizontalOptions="End" Margin="0,10,0,0"
+            BorderColor="Transparent"
+      BorderRadius="15"
+         TextColor="Black"
+            FontSize="14"
+        Text="{strings:Translate submit}"
+                      
+        BackgroundColor="Green"
+        Clicked="okButton_Clicked"
+                            
+                          />
+
+
+
+          </StackLayout>
+
+        </StackLayout>
+      </Frame>
+    </AbsoluteLayout>
+  </ScrollView>
+</pages:PopupPage>

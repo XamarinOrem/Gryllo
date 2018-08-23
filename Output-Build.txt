@@ -1,0 +1,5 @@
+﻿1>------ Clean started: Project: GrylooProject.iOS, Configuration: Release iPhone ------
+1>C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\Xamarin\iOS\Xamarin.Messaging.targets(41,3): warning VSX1000: No Address and User has been specified in order to establish a connection to a Mac Server, so only the main assembly was compiled for project 'GrylooProject.iOS'. Connect to a Mac Server and try again to build the full application.
+2>------ Clean started: Project: GrylooProject.Android, Configuration: Release Any CPU ------
+3>------ Clean started: Project: GrylooProject, Configuration: Release Any CPU ------
+========== Clean: 3 succeeded, 0 failed, 0 skipped ==========

@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GrylooProject.Views.ChartsPage"
+               xmlns:strings="clr-namespace:GrylooProject;assembly=GrylooProject"
+             xmlns:custom="clr-namespace:GrylooProject.CustomControls;assembly=GrylooProject"
+             xmlns:microcharts="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms">
+    <ContentPage.Content>
+        <ScrollView IsClippedToBounds="False">
+            <StackLayout Padding="10" BackgroundColor="White" Spacing="0.2">
+
+                <StackLayout Padding="10"  Orientation="Vertical" BackgroundColor="#EFEDEE"   VerticalOptions="FillAndExpand"  HorizontalOptions="FillAndExpand" >
+
+                <Label x:Name="subTitle" TextColor="Black" FontSize="16"  VerticalOptions="Center" />
+
+    </StackLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   <Frame  Margin="0,10,0,0" x:Name="CandidatureOrigenFrame"  IsVisible="false" HeightRequest="40" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" OutlineColor="#d4d4d4" BackgroundColor="Silver" HasShadow="false" CornerRadius="15" Padding="2">
+                  <Frame HeightRequest="40" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" OutlineColor="#d4d4d4" BackgroundColor="White" HasShadow="false" CornerRadius="15" Padding="15,5,15,5">
+
+                    <StackLayout  Spacing="0" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Orientation="Horizontal" BackgroundColor="White" Padding="0">
+                      <custom:CustomPicker   Title="{strings:Translate select}" x:Name="pickerOrigenCandidature" ItemDisplayBinding="{Binding CandidatureAcronyms}"  BackgroundColor="White"
+               TextColor="Black"  VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"
+               HeightRequest="40"   SelectedIndexChanged="Origen_SelectedIndexChanged" 
+             Margin="0" />
+                      <Image View.HorizontalOptions="End" HeightRequest="15"
+                WidthRequest="15" Margin="10,0,0,0"  Source="dropdown.png" >
+                      </Image>
+                    </StackLayout>
+                  </Frame>
+                  </Frame>
+                     <Label Margin="0,10,0,10"  IsVisible="false" x:Name="CandidatureOrigenLabel" FontAttributes="Bold" Text="{strings:Translate thereIsNoData}" TextColor="Green" FontSize="16" HorizontalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="Center" />
+                      
+                    <WebView IsVisible="false"  x:Name="CandidatureOrigeGraph" VerticalOptions="FillAndExpand">
+                            <WebView.Source>
+                                <HtmlWebViewSource x:Name="CandidaturedOrige"  />
+                            </WebView.Source>
+                        </WebView>
+
+
+
+                   <Frame  Margin="0,10,0,0" x:Name="CandidatureDestinoFrame"  IsVisible="false" HeightRequest="40" HorizontalOptions="CenterAndExpand" VerticalOptions="Start" OutlineColor="#d4d4d4" BackgroundColor="Silver" HasShadow="false" CornerRadius="15" Padding="2">
+                  <Frame HeightRequest="40" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" OutlineColor="#d4d4d4" BackgroundColor="White" HasShadow="false" CornerRadius="15" Padding="15,5,15,5">
+
+                    <StackLayout  Spacing="0" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Orientation="Horizontal" BackgroundColor="White" Padding="0">
+                      <custom:CustomPicker Title="{strings:Translate select}" x:Name="pickerDestinoCandidature" ItemDisplayBinding="{Binding CandidatureAcronyms}"  BackgroundColor="White"
+               TextColor="Black"  VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"
+               HeightRequest="40"   SelectedIndexChanged="Destino_SelectedIndexChanged" 
+             Margin="0" />
+                      <Image View.HorizontalOptions="End" HeightRequest="15"
+                WidthRequest="15" Margin="10,0,0,0"  Source="dropdown.png" >
+                      </Image>
+                    </StackLayout>
+                  </Frame>
+                  </Frame>
+                 
+                   <Label Margin="0,10,0,10"  IsVisible="false" x:Name="CandidatureDestinoLabel" FontAttributes="Bold" Text="{strings:Translate thereIsNoData}" TextColor="Green" FontSize="16" HorizontalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="Center" />
+                    <WebView IsVisible="false"  x:Name="CandidatureDestinoGraph" VerticalOptions="FillAndExpand">
+                            <WebView.Source>
+                                <HtmlWebViewSource x:Name="CandidaturedDestino"  />
+                            </WebView.Source>
+                        </WebView>
+                       
+                
+                 <Label Margin="0,10,0,10"  IsVisible="false" x:Name="GryllooVoteLabel" FontAttributes="Bold" Text="{strings:Translate thereIsNoData}" TextColor="Green" FontSize="16" HorizontalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="Center" />
+               
+                 <WebView IsVisible="false"  x:Name="GryllooVoteMultiLineGraph" VerticalOptions="FillAndExpand">
+                            <WebView.Source>
+                                <HtmlWebViewSource x:Name="GryllooVoteMultiLine"  />
+                            </WebView.Source>
+                        </WebView>
+                         <Label Margin="0,10,0,10"  IsVisible="false" x:Name="GryllooUserLabel" FontAttributes="Bold" Text="{strings:Translate thereIsNoData}" TextColor="Green" FontSize="16" HorizontalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="Center" />
+               
+                 <WebView IsVisible="false"  x:Name="GryllooUserMultiLineGraph" VerticalOptions="FillAndExpand">
+                            <WebView.Source>
+                                <HtmlWebViewSource x:Name="GryllooUserMultiLine"  />
+                            </WebView.Source>
+                        </WebView>
+                
+
+
+
+
+
+
+
+
+
+
+
+
+                
+
+
+                
+
+                <StackLayout IsVisible="false" Spacing="0" x:Name="ambText" Orientation="Horizontal" HorizontalOptions="CenterAndExpand"  VerticalOptions="FillAndExpand">
+                    <Label LineBreakMode="NoWrap" Margin="0,3,0,0" FontAttributes="Bold" Text="Ambito " TextColor="Black" FontSize="15" HorizontalTextAlignment="End" HorizontalOptions="End" VerticalOptions="Center" />
+
+                    <Frame   Margin="0,10,0,0" HeightRequest="40" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" OutlineColor="Black" BackgroundColor="Black" HasShadow="false" CornerRadius="0"
+                Padding="1">
+
+                    <Frame HeightRequest="40" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" OutlineColor="#d4d4d4" BackgroundColor="White" HasShadow="false" CornerRadius="0"
+                Padding="0,5,0,5">
+
+                    <StackLayout  Spacing="0" HorizontalOptions="FillAndExpand"
+                       VerticalOptions="Center"
+                       Orientation="Horizontal"
+                       BackgroundColor="White"
+                       Padding="0">
+
+
+
+
+                        <custom:CustomPicker  IsVisible="False"  x:Name="pickerProductCategory" Title="{strings:Translate selectType}" BackgroundColor="White"
+                     TextColor="Black"  VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" SelectedIndexChanged="pickerReason_SelectedIndexChanged"
+                     HeightRequest="40"
+                         
+                   Margin="0" 
+     
+                          />
+
+                        <Image  IsVisible="False" x:Name="TimeImg" Margin="5,0,0,0" View.HorizontalOptions="End" HeightRequest="15"
+                  WidthRequest="15"   Source="dropdown.png" >
+
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer  Tapped="imgStoreTapped"/>
+                            </Image.GestureRecognizers>
+
+                        </Image>
+
+
+
+
+                        <custom:CustomPicker IsVisible="False" Margin="10,0,0,0" x:Name="pickerRegion" ItemDisplayBinding="{Binding RegionName}" Title="{strings:Translate totalCountry}" BackgroundColor="White"
+           TextColor="Black"  VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"
+           HeightRequest="40" SelectedIndexChanged="pickerRegion_SelectedIndexChanged"
+                          />
+
+                        <Image  IsVisible="False" x:Name="RegionImg"  Margin="5,0,0,0" View.HorizontalOptions="End" HeightRequest="15"
+                WidthRequest="15"   Source="dropdown.png" >
+                        </Image>
+
+
+                        <custom:CustomPicker IsVisible="False" IsEnabled="false" Margin="10,0,0,0" x:Name="pickerProvince" ItemDisplayBinding="{Binding ProvinceName}" Title="{strings:Translate totalregion}" BackgroundColor="White"
+               TextColor="Black"  VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" 
+               HeightRequest="40"  SelectedIndexChanged="pickerProvince_SelectedIndexChanged"
+                          />
+
+                        <Image IsVisible="False" x:Name="ProvinceImg"  Margin="5,0,0,0" View.HorizontalOptions="End" HeightRequest="15"
+                WidthRequest="15"  Source="dropdown.png" >
+                        </Image>
+
+
+
+
+
+
+                    </StackLayout>
+
+
+                    </Frame>
+                </Frame>
+
+                </StackLayout>
+
+
+
+                <StackLayout   x:Name="chartViewLayout" VerticalOptions="FillAndExpand">
+
+
+                    <Label Margin="0,10,0,10" IsVisible="false"  x:Name="partyLabel" FontAttributes="Bold" Text="{strings:Translate thereIsNoData}" TextColor="Green" FontSize="16" HorizontalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="Center" />
+                    
+                        <WebView  IsVisible="false"  x:Name="partyGraph" VerticalOptions="FillAndExpand">
+                            <WebView.Source>
+                                <HtmlWebViewSource x:Name="d"  />
+                            </WebView.Source>
+                        </WebView>
+
+
+                    <Label Margin="0,10,0,10"  IsVisible="false" x:Name="CandidaturedoughnutLabel" FontAttributes="Bold" Text="{strings:Translate thereIsNoData}" TextColor="Green" FontSize="16" HorizontalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="Center" />
+                      
+                    <WebView IsVisible="false"  x:Name="CandidaturedoughnutGraph" VerticalOptions="FillAndExpand">
+                            <WebView.Source>
+                                <HtmlWebViewSource x:Name="Candidaturedoughnut"  />
+                            </WebView.Source>
+                        </WebView>
+
+
+
+                    <Frame  Margin="0,10,0,0" IsVisible="false" x:Name="CandidatureMultiLineFrame" HeightRequest="40" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" OutlineColor="#d4d4d4" BackgroundColor="Silver" HasShadow="false" CornerRadius="15" Padding="2">
+                  <Frame HeightRequest="40" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" OutlineColor="#d4d4d4" BackgroundColor="White" HasShadow="false" CornerRadius="15" Padding="15,5,15,5">
+
+                    <StackLayout  Spacing="0" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Orientation="Horizontal" BackgroundColor="White" Padding="0">
+                      <custom:CustomPicker  x:Name="pickerLineGraph" Title="{strings:Translate selectTime}" BackgroundColor="White"
+               TextColor="Black"  VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"
+               HeightRequest="40"  SelectedIndexChanged="MultiLine_SelectedIndexChanged"
+             Margin="0" />
+                      <Image View.HorizontalOptions="End" HeightRequest="15"
+                WidthRequest="15" Margin="10,0,0,0"  Source="dropdown.png" >
+                      </Image>
+                    </StackLayout>
+                  </Frame>
+                  </Frame>
+                    <Label Margin="0,10,0,10"  IsVisible="false" x:Name="CandidatureMultiLineLabel" FontAttributes="Bold" Text="{strings:Translate thereIsNoData}" TextColor="Green" FontSize="16" HorizontalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="Center" />
+               
+                 <WebView IsVisible="false"  x:Name="CandidatureMultiLineGraph" VerticalOptions="FillAndExpand">
+                            <WebView.Source>
+                                <HtmlWebViewSource x:Name="CandidatureMultiLine"  />
+                            </WebView.Source>
+                        </WebView>
+
+
+                    <Frame  Margin="0,10,0,0" x:Name="CandidatureGroupFrame"  IsVisible="false" HeightRequest="40" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" OutlineColor="#d4d4d4" BackgroundColor="Silver" HasShadow="false" CornerRadius="15" Padding="2">
+                  <Frame HeightRequest="40" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" OutlineColor="#d4d4d4" BackgroundColor="White" HasShadow="false" CornerRadius="15" Padding="15,5,15,5">
+
+                    <StackLayout  Spacing="0" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Orientation="Horizontal" BackgroundColor="White" Padding="0">
+                      <custom:CustomPicker Title="{strings:Translate select}" x:Name="pickerCandidature" ItemDisplayBinding="{Binding CandidatureAcronyms}"  BackgroundColor="White"
+               TextColor="Black"  VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"
+               HeightRequest="40"   SelectedIndexChanged="Candidature_SelectedIndexChanged" 
+             Margin="0" />
+                      <Image View.HorizontalOptions="End" HeightRequest="15"
+                WidthRequest="15" Margin="10,0,0,0"  Source="dropdown.png" >
+                      </Image>
+                    </StackLayout>
+                  </Frame>
+                  </Frame>
+                    <Label Margin="0,10,0,10"  IsVisible="false" x:Name="CandidatureGroupLabel" FontAttributes="Bold" Text="{strings:Translate thereIsNoData}" TextColor="Green" FontSize="16" HorizontalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="Center" />
+                       <WebView  IsVisible="false"  x:Name="CandidatureGroupGraph" VerticalOptions="FillAndExpand">
+                            <WebView.Source>
+                                <HtmlWebViewSource x:Name="CandidatureGroup"  />
+                            </WebView.Source>
+                        </WebView>
+
+
+
+                    <Frame  Margin="0,10,0,0" IsVisible="false" x:Name="CandidatureWinnerFrame" HeightRequest="40" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" OutlineColor="#d4d4d4" BackgroundColor="Silver" HasShadow="false" CornerRadius="15" Padding="2">
+                  <Frame HeightRequest="40" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" OutlineColor="#d4d4d4" BackgroundColor="White" HasShadow="false" CornerRadius="15" Padding="15,5,15,5">
+
+                    <StackLayout  Spacing="0" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Orientation="Horizontal" BackgroundColor="White" Padding="0">
+                       <custom:CustomPicker  x:Name="pickerWinnerGraph" Title="{strings:Translate select}" BackgroundColor="White"
+               TextColor="Black"  VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"
+               HeightRequest="40"  SelectedIndexChanged="Winner_SelectedIndexChanged"
+             Margin="0" />
+                      <Image View.HorizontalOptions="End" HeightRequest="15"
+                WidthRequest="15" Margin="10,0,0,0"  Source="dropdown.png" >
+                      </Image>
+                    </StackLayout>
+                  </Frame>
+                  </Frame>
+                   
+                     <WebView  IsVisible="false"  x:Name="CandidatureWinnerGraph" VerticalOptions="FillAndExpand">
+                            <WebView.Source>
+                                <HtmlWebViewSource x:Name="CandidatureWinner"  />
+                            </WebView.Source>
+                        </WebView>
+          
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                </StackLayout>
+
+
+
+
+
+
+
+
+
+
+                
+         <!--<StackLayout  Padding="10" Orientation="Horizontal" BackgroundColor="#efeded" HeightRequest="60" HorizontalOptions="FillAndExpand" >
+
+            <Label Text="LEADERS" FontAttributes="Bold" TextColor="Black" FontSize="10" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" HorizontalOptions="Start" VerticalOptions="Center" />
+                </StackLayout>-->
+
+
+                <StackLayout x:Name="chartViewSecondLayout" VerticalOptions="FillAndExpand">
+
+                    <Label Margin="0,10,0,10"  IsVisible="false" x:Name="leaderLabel" FontAttributes="Bold" Text="{strings:Translate thereIsNoData}" TextColor="Green" FontSize="16" HorizontalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="Center" />
+
+                    <WebView HeightRequest="100" IsVisible="false" x:Name="leaderGraph" VerticalOptions="FillAndExpand">
+                        <WebView.Source>
+                            <HtmlWebViewSource x:Name="e"  />
+                        </WebView.Source>
+                    </WebView>
+
+                  
+                
+                    <Frame x:Name="pickerLeaderLineFrame" IsVisible="false" HeightRequest="40" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" OutlineColor="#d4d4d4" BackgroundColor="Silver" HasShadow="false" CornerRadius="15" Padding="2">
+                  <Frame HeightRequest="40" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" OutlineColor="#d4d4d4" BackgroundColor="White" HasShadow="false" CornerRadius="15" Padding="15,5,15,5">
+
+                    <StackLayout  Spacing="0" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Orientation="Horizontal" BackgroundColor="White" Padding="0">
+                      <custom:CustomPicker  x:Name="pickerLeaderLineGraph" Title="{strings:Translate selectTime}" BackgroundColor="White"
+               TextColor="Black"  VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"
+               HeightRequest="40"  SelectedIndexChanged="MultiLineLeader_SelectedIndexChanged"
+             Margin="0" />
+                      <Image View.HorizontalOptions="End" HeightRequest="15"
+                WidthRequest="15" Margin="10,0,0,0"  Source="dropdown.png" >
+                      </Image>
+                    </StackLayout>
+                  </Frame>
+                  </Frame>
+                    <Label Margin="0,10,0,10"  IsVisible="false" x:Name="LeaderMultiLineLabel" FontAttributes="Bold" Text="{strings:Translate thereIsNoData}" TextColor="Green" FontSize="16" HorizontalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="Center" />
+               
+                 <WebView IsVisible="false"  x:Name="LeaderMultiLineGraph" VerticalOptions="FillAndExpand">
+                            <WebView.Source>
+                                <HtmlWebViewSource x:Name="LeaderMultiLine"  />
+                            </WebView.Source>
+                        </WebView>
+          
+        
+        
+    
+                  
+                  <Frame x:Name="LeaderGroupFrame" IsVisible="false" HeightRequest="40" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" OutlineColor="#d4d4d4" BackgroundColor="Silver" HasShadow="false" CornerRadius="15" Padding="2">
+                  <Frame HeightRequest="40" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" OutlineColor="#d4d4d4" BackgroundColor="White" HasShadow="false" CornerRadius="15" Padding="15,5,15,5">
+
+                    <StackLayout  Spacing="0" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Orientation="Horizontal" BackgroundColor="White" Padding="0">
+                      <custom:CustomPicker Title="{strings:Translate select}" x:Name="pickerLeader" ItemDisplayBinding="{Binding LeaderName}"  BackgroundColor="White"
+               TextColor="Black"  VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"
+               HeightRequest="40"   SelectedIndexChanged="Leader_SelectedIndexChanged" 
+             Margin="0" />
+                      <Image View.HorizontalOptions="End" HeightRequest="15"
+                WidthRequest="15" Margin="10,0,0,0"  Source="dropdown.png" >
+                      </Image>
+                    </StackLayout>
+                  </Frame>
+                  </Frame>
+                    <Label Margin="0,10,0,10"  IsVisible="false" x:Name="LeaderGroupLabel" FontAttributes="Bold" Text="{strings:Translate thereIsNoData}" TextColor="Green" FontSize="16" HorizontalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="Center" />
+                       <WebView  IsVisible="false"  x:Name="LeaderGroupGraph" VerticalOptions="FillAndExpand">
+                            <WebView.Source>
+                                <HtmlWebViewSource x:Name="LeaderGroup"  />
+                            </WebView.Source>
+                        </WebView>
+                  
+                
+          
+            <Frame x:Name="LeaderWinnerFrame" IsVisible="false" HeightRequest="40" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" OutlineColor="#d4d4d4" BackgroundColor="Silver" HasShadow="false" CornerRadius="15" Padding="2">
+                  <Frame HeightRequest="40" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" OutlineColor="#d4d4d4" BackgroundColor="White" HasShadow="false" CornerRadius="15" Padding="15,5,15,5">
+
+                    <StackLayout  Spacing="0" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Orientation="Horizontal" BackgroundColor="White" Padding="0">
+                       <custom:CustomPicker  x:Name="pickerLeaderWinnerGraph" Title="{strings:Translate select}" BackgroundColor="White"
+               TextColor="Black"  VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"
+               HeightRequest="40"  SelectedIndexChanged="LeaderWinner_SelectedIndexChanged"
+             Margin="0" />
+                      <Image View.HorizontalOptions="End" HeightRequest="15"
+                WidthRequest="15" Margin="10,0,0,0"  Source="dropdown.png" >
+                      </Image>
+                    </StackLayout>
+                  </Frame>
+                  </Frame>
+                   
+                     <WebView  IsVisible="false"  x:Name="LeaderWinnerGraph" VerticalOptions="FillAndExpand">
+                            <WebView.Source>
+                                <HtmlWebViewSource x:Name="LeaderWinner"  />
+                            </WebView.Source>
+                        </WebView>
+        
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    
+
+
+                </StackLayout>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
